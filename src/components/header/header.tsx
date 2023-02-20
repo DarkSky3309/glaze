@@ -6,6 +6,7 @@ const Header = () => {
     let logo = createRef<HTMLHeadingElement>()
     let menu = createRef<HTMLDivElement>()
     let animateObject = createRef<HTMLDivElement>()
+    let circle = createRef<HTMLDivElement>()
     let id: number | undefined = undefined
     let id2: number | undefined = undefined
     const speed: number = 8
@@ -13,18 +14,21 @@ const Header = () => {
     function initAnimation() {
         let animElementLogo = logo.current
         let animElementMenu = menu.current
+        let animElementCircle = circle.current
         let currentMenuPosition = -270
+        let currentCirclePosition = -122
         let currentLogoPosition = 350
         clearInterval(id);
         id = setInterval(frame, speed);
         function frame() {
             if (currentLogoPosition === 80 && currentMenuPosition === 0) {
                 clearInterval(id)
-
             } else {
                 currentLogoPosition -= 5
                 currentMenuPosition += 5
-                if (animElementLogo && animElementMenu){
+                currentCirclePosition++
+                if (animElementLogo && animElementMenu && animElementCircle){
+                    animElementCircle.style.left = currentCirclePosition + "px"
                     animElementLogo.style.left = currentLogoPosition + "px"
                     animElementMenu.style.right = currentMenuPosition + "px"
                 }
@@ -94,7 +98,7 @@ const Header = () => {
 
     return (
         <header className={"header"}>
-            <div className={"circle"}></div>
+            <div className={"circle"} ref={circle}></div>
             <h2 className={"logo"} ref={logo}>Glaze Designer</h2>
             <div className={"menu"} ref={menu}>
                 <i onClick={() => showMenu()} className="ri-menu-line"/>
