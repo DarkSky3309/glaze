@@ -16,7 +16,7 @@ const Header = () => {
         let animElementMenu = menu.current
         let animElementCircle = circle.current
         let currentMenuPosition = -270
-        let currentCirclePosition = -122
+        let currentCirclePosition = -182
         let currentLogoPosition = 350
         clearInterval(id);
         id = setInterval(frame, speed);
@@ -26,7 +26,7 @@ const Header = () => {
             } else {
                 currentLogoPosition -= 5
                 currentMenuPosition += 5
-                currentCirclePosition++
+                currentCirclePosition += 2
                 if (animElementLogo && animElementMenu && animElementCircle){
                     animElementCircle.style.left = currentCirclePosition + "px"
                     animElementLogo.style.left = currentLogoPosition + "px"
@@ -40,14 +40,14 @@ const Header = () => {
         let animObject = animateObject.current
         let currentPosition = 600
         clearInterval(id2);
-        id2 = setInterval(frame, 1);
+        id2 = setInterval(frame, 7);
         function frame(){
-            if (currentPosition === 0){
+            if (currentPosition <= 0){
                 clearInterval(id2)
                 animObject?.remove()
                 menu.current?.classList.add("menu-bcg")
             }
-            currentPosition -= 5;
+            currentPosition -=10;
             if (animObject)
                 animObject.style.top = currentPosition + "px"
         }
