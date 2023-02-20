@@ -1,0 +1,65 @@
+@import "variables";
+
+.header {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  text-align: center;
+  font-size: $bigger;
+  padding: 0 0 0 30px;
+}
+
+.circle {
+  position: absolute;
+  display: block;
+  top: -62px;
+  left: -62px;
+  content: " ";
+  background-color: $orange;
+  padding: 62px;
+  border-radius: 50%;
+}
+
+.logo {
+  font-size: $bigger;
+  font-weight: 400;
+  margin: 0 auto;
+  z-index: 3;
+  padding-top: 40px;
+  position: absolute;
+  left: 90px;
+}
+.logo:hover{
+  animation-name: menu;
+  animation-duration: 1s;
+}
+
+
+
+.menu {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  background-color: $orange;
+  padding: 40px 30px 30px;
+  border-radius: 20px 0 20px 20px;
+  gap: 10px;
+}
+
+.menu__links{
+
+}
+
+.menu__links ul {
+  list-style: inside;
+  text-align: start;
+  min-width: 110px;
+  font-size: $regular-text;
+}
+.menu__links a {
+  color: white;
+}
+
+li.menu-item:not(:last-child) {
+  margin-bottom: 5px;
+}
