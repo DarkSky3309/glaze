@@ -5,6 +5,7 @@
   text-align: center;
   font-size: 1.875rem;
   padding: 0 0 30px 30px;
+  height: 100px;
 }
 
 .circle {
@@ -19,6 +20,7 @@
 }
 
 .logo {
+  width: max-content;
   font-size: 1.875rem;
   font-weight: 400;
   margin: 0 auto;
@@ -33,12 +35,15 @@
   animation-duration: 1s;
 }
 
+.menu-bcg {
+  background-color: #ED6D33;
+}
+
 .menu {
-  position: relative;
+  position: absolute;
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  background-color: #ED6D33;
   padding: 60px 45px 45px;
   border-radius: 20px 0 20px 20px;
   gap: 10px;
@@ -74,6 +79,14 @@
 
 li.menu-item:not(:last-child) {
   margin-bottom: 5px;
+}
+
+.animateObject {
+  position: absolute;
+  width: 90px;
+  height: 105px;
+  background-color: #ED6D33;
+  border-radius: 20px 0 20px 20px;
 }
 
 /*# sourceMappingURL=header.css.map */

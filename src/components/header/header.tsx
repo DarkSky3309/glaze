@@ -1,28 +1,55 @@
-import React, {createRef, useState} from 'react';
+import React, {createRef, useEffect, useState} from 'react';
 import "../../scss/header.css"
 
 const Header = () => {
     const [visibility, setVisibility] = useState(false)
     let logo = createRef<HTMLHeadingElement>()
+    let menu = createRef<HTMLDivElement>()
+    let animateObject = createRef<HTMLDivElement>()
     let id: number | undefined = undefined
-    let animation = createRef<HTMLDivElement>()
+    let id2: number | undefined = undefined
+    const speed: number = 8
 
     function initAnimation() {
-        let animElement = animation.current
-        let curentPosition = -100
+        let animElementLogo = logo.current
+        let animElementMenu = menu.current
+        let currentMenuPosition = -270
+        let currentLogoPosition = 350
         clearInterval(id);
-        id = setInterval(frame);
-
+        id = setInterval(frame, speed);
         function frame() {
-            if (curentPosition === 10){
+            if (currentLogoPosition === 80 && currentMenuPosition === 0) {
                 clearInterval(id)
+
             } else {
-                curentPosition += 5
-                if (animElement)
-                    animElement.style.left
+                currentLogoPosition -= 5
+                currentMenuPosition += 5
+                if (animElementLogo && animElementMenu){
+                    animElementLogo.style.left = currentLogoPosition + "px"
+                    animElementMenu.style.right = currentMenuPosition + "px"
+                }
             }
         }
     }
+
+    function animatingObject(){
+        let animObject = animateObject.current
+        let currentPosition = 600
+        clearInterval(id2);
+        id2 = setInterval(frame, 1);
+        function frame(){
+            if (currentPosition === 0){
+                clearInterval(id2)
+                animObject?.remove()
+                menu.current?.classList.add("menu-bcg")
+            }
+            currentPosition -= 5;
+            if (animObject)
+                animObject.style.top = currentPosition + "px"
+        }
+    }
+
+    useEffect(() => {initAnimation(); animatingObject()}, [])
 
     function showMenu() {
         setVisibility(!visibility)
@@ -68,20 +95,19 @@ const Header = () => {
     return (
         <header className={"header"}>
             <div className={"circle"}></div>
-            <div ref={animation}>
-                <h2 className={"logo"} ref={logo}>Glaze Designer</h2>
-                <div className={"menu"}>
-                    <i onClick={() => showMenu()} className="ri-menu-line"/>
-                    {visibility && <div className={"menu__links"} id={"myLinks"}>
-                        <ul>
-                            <li className={"menu-item"}><a href="src/components#">Services</a></li>
-                            <li className={"menu-item"}><a href="src/components#">LookBook</a></li>
-                            <li className={"menu-item"}><a href="src/components#">About Us</a></li>
-                            <li className={"menu-item"}><a href="src/components#">Contact</a></li>
-                        </ul>
-                    </div>}
-                </div>
+            <h2 className={"logo"} ref={logo}>Glaze Designer</h2>
+            <div className={"menu"} ref={menu}>
+                <i onClick={() => showMenu()} className="ri-menu-line"/>
+                {visibility && <div className={"menu__links"} id={"myLinks"}>
+                    <ul>
+                        <li className={"menu-item"}><a href="src/components#">Services</a></li>
+                        <li className={"menu-item"}><a href="src/components#">LookBook</a></li>
+                        <li className={"menu-item"}><a href="src/components#">About Us</a></li>
+                        <li className={"menu-item"}><a href="src/components#">Contact</a></li>
+                    </ul>
+                </div>}
             </div>
+            <div className={"animateObject"} ref={animateObject}></div>
         </header>
     );
 };
