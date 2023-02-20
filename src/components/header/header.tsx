@@ -17,7 +17,7 @@ const Header = () => {
             clearInterval(id);
             id = setInterval(frame);
             function frame() {
-                if (left === 90)
+                if (left === 80)
                     clearInterval(id);
                 else {
                     left += 5
@@ -28,7 +28,7 @@ const Header = () => {
         }
         function openMenuAnimation() {
             let elem = logo.current
-            let left = 90
+            let left = 80
             clearInterval(id);
             id = setInterval(frame);
             function frame() {
@@ -44,6 +44,7 @@ const Header = () => {
 
         return (
             <header className={"header"}>
+
                 <div className={"circle"}></div>
                 <h2 className={"logo"} ref={logo}>Glaze Designer</h2>
                 <div className={"menu"}>

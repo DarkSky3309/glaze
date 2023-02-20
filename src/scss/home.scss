@@ -1,0 +1,56 @@
+@import "variables";
+
+.home__content{
+  position: relative;
+  padding: 0 25px;
+  height: 700px;
+  overflow: hidden;
+}
+
+.image{
+  width: 152px;
+  height: 234px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.title {
+  font-size: $phone-title-size;
+  font-weight: 400;
+}
+
+h1{
+  padding-bottom: 20px;
+}
+
+.left {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 25px;
+}
+
+.right {
+  position: absolute;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.bcg-circle{
+  position: absolute;
+  background-color: $orange;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  z-index: -1;
+}
+
+.bottom-left{
+  width: 180px;
+  height: 180px;
+  left: -60px;
+  bottom: -60px;
+
+}
