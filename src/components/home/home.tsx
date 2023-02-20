@@ -6,17 +6,19 @@ const Home = () => {
     let titleCircle = createRef<HTMLDivElement>()
     let signRef = createRef<HTMLSpanElement>()
     let signCircle = createRef<HTMLDivElement>()
-    useEffect(()=> addCircle(), [])
-    function addCircle(){
-        let posSignTop = titleRef.current?.getBoundingClientRect().top
+    useEffect(() => addCircle(), [])
+
+    function addCircle() {
+        let posSignTop = 0
         let posSignLeft = titleRef.current?.getBoundingClientRect().left
         let posTitle = titleRef.current
         let posSign = signRef.current
-        if (signCircle.current && posSignLeft && posSignTop){
+        if (signCircle.current && posSign) {
+            posSignTop = posSign.getBoundingClientRect().top - document.body.getBoundingClientRect().top
             signCircle.current.style.left = posSignLeft + "px"
-            signCircle.current.style.top = (posSignTop * 2.5) + "px"
+            signCircle.current.style.top = posSignTop/1.4 + "px"
         }
-        if (titleCircle.current && posTitle){
+        if (titleCircle.current && posTitle) {
             titleCircle.current.style.left = posTitle.style.left
             titleCircle.current.style.top = posTitle.style.top
         }
@@ -31,7 +33,7 @@ const Home = () => {
             </div>
             <div className={"right"}>
                 <img src="src/assets/home/bcg2.png" alt="design" className="image"/>
-                <span className={"title subtitle"}>De <br/> sign<span ref={signRef}>e</span>r</span>
+                <span className={"title subtitle"}>De <br/> sign<span ref={signRef} className={"e"}>e</span>r</span>
                 <img src="src/assets/home/bcg3.png" alt="design" className="image"/>
                 <div className="bcg-circle signer" ref={signCircle}></div>
 

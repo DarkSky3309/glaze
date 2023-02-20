@@ -1,0 +1,81 @@
+@import "variables";
+
+footer {
+  background-color: $darkgreen;
+  padding: 20px 25px 0;
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  grid-template-rows: auto;
+  grid-row-gap: 15px;
+  grid-template-areas:
+  "logo menu"
+  "social menu"
+  "social menu"
+  "term ."
+  "condition privacy"
+}
+
+h2{
+  font-size: $bigger;
+  font-weight: 400;
+}
+
+.footer-logo{
+  grid-area: logo;
+}
+
+.social{
+  grid-area: social;
+  width: 60%;
+  h3 {
+    font-size: $bigger;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .links{
+    display: flex;
+    justify-content: space-between;
+    i{
+      color: white;
+      font-size: $bigger;
+    }
+  }
+}
+
+.term{
+  grid-area: term;
+  font-size: $bigger;
+  font-weight: 400;
+}
+
+.conditions {
+  font-family: 'Inter', sans-serif;
+  font-size: $regular-text;
+  font-weight: 400;
+  grid-area: condition;
+}
+.footer__menu{
+  grid-area: menu;
+  padding-left: 45px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  h4{
+    font-size: $bigger;
+    font-weight: 400;
+  }
+  a{
+    color: white;
+    &:hover{
+      color: $green;
+    }
+  }
+
+}
+.privacy{
+  font-family: 'Inter', sans-serif;
+  grid-area: privacy;
+  font-size: $regular-text;
+  font-weight: 400;
+}

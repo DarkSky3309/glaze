@@ -1,13 +1,13 @@
 @import "variables";
 
-.home__content{
+.home__content {
   position: relative;
   padding: 0 25px;
   height: 700px;
   overflow: hidden;
 }
 
-.image{
+.image {
   width: 152px;
   height: 234px;
   object-fit: cover;
@@ -19,7 +19,7 @@
   font-weight: 400;
 }
 
-h1{
+h1 {
   padding-bottom: 20px;
 }
 
@@ -38,7 +38,7 @@ h1{
   gap: 40px;
 }
 
-.bcg-circle{
+.bcg-circle {
   position: absolute;
   background-color: $orange;
   border-radius: 50%;
@@ -47,10 +47,9 @@ h1{
   z-index: -1;
 }
 
-.bottom-left{
+.bottom-left {
   width: 180px;
   height: 180px;
   left: -60px;
   bottom: -60px;
-
 }
