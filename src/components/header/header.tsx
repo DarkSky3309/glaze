@@ -1,5 +1,6 @@
 import React, {createRef, useEffect, useState} from 'react';
 import "../../scss/header.css"
+import {Link} from "react-router-dom";
 
 const Header = () => {
     const [visibility, setVisibility] = useState(false)
@@ -104,10 +105,11 @@ const Header = () => {
                 <i onClick={() => showMenu()} className="ri-menu-line"/>
                 {visibility && <div className={"menu__links"} id={"myLinks"}>
                     <ul>
-                        <li className={"menu-item"}><a href="src/components#">Services</a></li>
-                        <li className={"menu-item"}><a href="src/components#">LookBook</a></li>
-                        <li className={"menu-item"}><a href="src/components#">About Us</a></li>
-                        <li className={"menu-item"}><a href="src/components#">Contact</a></li>
+                        <li className={"menu-item"}><Link to="/home">Home</Link></li>
+                        <li className={"menu-item"}><Link to="/services">Services</Link></li>
+                        <li className={"menu-item"}><Link to="/look-book">LookBook</Link></li>
+                        <li className={"menu-item"}><Link to="/about-us">About Us</Link></li>
+                        <li className={"menu-item"}><Link to="/contact">Contact</Link></li>
                     </ul>
                 </div>}
             </div>
