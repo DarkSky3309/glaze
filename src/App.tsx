@@ -15,6 +15,9 @@ function App() {
                     <Route path="*" element={<Navigate to="/home"/>}/>
                     <Route path="/home" element={<Home/>}/>
                     <Route path="/services" element={<Services/>}/>
+                    <Route path="/look-book" element={<Services/>}/>
+                    <Route path="/about-us" element={<Services/>}/>
+                    <Route path="/contact" element={<Services/>}/>
                 </Routes>
             </main>
         <Footer/>

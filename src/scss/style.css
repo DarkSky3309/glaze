@@ -37,6 +37,11 @@ a:hover {
   outline: 0;
 }
 
+.title {
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+
 body {
   background-color: #728267;
   color: white;

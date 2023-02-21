@@ -1,0 +1,101 @@
+@import "variables";
+
+.services__content {
+  position: relative;
+  padding: 0 25px;
+
+  .services__title {
+    position: relative;
+    height: 70px;
+
+    .title {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+    }
+
+    .aftercircle::before {
+      content: '';
+      position: absolute;
+      background-color: $orange;
+      margin-left: -20px;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+
+  .services__main {
+    .services__main-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      &:not(:last-of-type){
+        border-bottom: 2px solid $darkgreen;
+      }
+      h3 {
+        font-weight: 400;
+        font-size: $bigger;
+        width: min-content;
+        margin-bottom: 10px;
+      }
+
+      img {
+        width: 150px;
+        height: 110px;
+      }
+
+      p {
+        font-family: "Lora", serif;
+        font-size: $regular-text;
+        margin-top: 10px;
+      }
+
+      .first-item-title{
+        &::before {
+          content: '';
+          position: absolute;
+          background-color: $orange;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          z-index: -1;
+          margin-top: 10px;
+          margin-left: 30px;
+        }
+
+      }
+      .second-item-title {
+        &::before {
+          content: '';
+          position: absolute;
+          background-color: $orange;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          margin-left: 100px;
+          margin-top: -10px;
+          z-index: -1;
+        }
+      }
+      .third-item-title{
+        &::before{
+          content: '';
+          position: absolute;
+          background-color: $orange;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          z-index: -1;
+          margin-top: -10px;
+        }
+      }
+    }
+  }
+
+}

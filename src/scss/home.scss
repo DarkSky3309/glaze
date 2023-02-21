@@ -1,8 +1,11 @@
 @import "variables";
 
+main{
+}
+
 .home__content {
-  position: relative;
   padding: 0 25px;
+  position: relative;
   height: 700px;
   overflow: hidden;
 }
@@ -14,10 +17,6 @@
   border-radius: 20px;
 }
 
-.title {
-  font-size: $phone-title-size;
-  font-weight: 400;
-}
 
 h1 {
   padding-bottom: 20px;

@@ -1,6 +1,6 @@
 .home__content {
-  position: relative;
   padding: 0 25px;
+  position: relative;
   height: 700px;
   overflow: hidden;
 }
@@ -10,11 +10,6 @@
   height: 234px;
   object-fit: cover;
   border-radius: 20px;
-}
-
-.title {
-  font-size: 3.5rem;
-  font-weight: 400;
 }
 
 h1 {
