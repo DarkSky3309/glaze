@@ -4,6 +4,7 @@ import Footer from "./components/footer/footer";
 import {Navigate, Route, Routes} from "react-router-dom";
 import React from "react";
 import Services from "./components/services/services";
+import About from "./components/about-us/About";
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
                     <Route path="/home" element={<Home/>}/>
                     <Route path="/services" element={<Services/>}/>
                     <Route path="/look-book" element={<Services/>}/>
-                    <Route path="/about-us" element={<Services/>}/>
+                    <Route path="/about-us" element={<About/>}/>
                     <Route path="/contact" element={<Services/>}/>
                 </Routes>
             </main>
