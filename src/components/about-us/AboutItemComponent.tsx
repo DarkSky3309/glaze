@@ -5,11 +5,12 @@ interface ItemProps{
     image: string
     profession: string
     description: string
+    position:string
 }
-const AboutItemComponent:FC<ItemProps> = ({name, image,profession,description}) => {
+const AboutItemComponent:FC<ItemProps> = ({name, image,profession,description, position}) => {
     return (
         <div className="about__main-item">
-            <div className="about__main-item-info">
+            <div className={`about__main-item-info ${position}`}>
                 <img src={image} alt="our specialist"/>
                 <div className="about__main-item-info-name">
                     <h3>{name}</h3>

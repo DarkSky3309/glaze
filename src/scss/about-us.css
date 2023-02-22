@@ -1,5 +1,89 @@
+.about__content {
+  position: relative;
+  height: 1500px;
+}
 .about__content .about__title {
   text-align: center;
+}
+.about__content .about__title .title::before {
+  content: "";
+  position: absolute;
+  background-color: #ED6D33;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  z-index: -1;
+  margin-left: 60px;
+}
+.about__content .about__main {
+  position: relative;
+}
+.about__content .about__main .about__main-item {
+  position: absolute;
+  height: 300px;
+  padding: 0 25px;
+}
+.about__content .about__main .about__main-item:nth-of-type(1) {
+  top: 0;
+}
+.about__content .about__main .about__main-item:nth-of-type(2) {
+  top: 340px;
+}
+.about__content .about__main .about__main-item:nth-of-type(3) {
+  top: 720px;
+}
+.about__content .about__main .about__main-item:nth-of-type(4) {
+  top: 1040px;
+}
+.about__content .about__main .about__main-item .left {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.about__content .about__main .about__main-item .left .about__main-item-info-name {
+  padding-right: 20px;
+}
+.about__content .about__main .about__main-item .left img {
+  left: 25px;
+  top: -33px;
+  border-radius: 20px;
+}
+.about__content .about__main .about__main-item .right {
+  display: flex;
+}
+.about__content .about__main .about__main-item .right .about__main-item-info-name {
+  padding-left: 20px;
+}
+.about__content .about__main .about__main-item .right img {
+  right: 25px;
+  top: -33px;
+  border-radius: 20px;
+}
+.about__content .about__main .about__main-item .about__main-item-info {
+  height: 170px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ED6D33;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.about__content .about__main .about__main-item .about__main-item-info .about__main-item-info-name h3 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.about__content .about__main .about__main-item .about__main-item-info .about__main-item-info-name h4 {
+  font-size: 1.875rem;
+  width: min-content;
+  font-weight: 400;
+}
+.about__content .about__main .about__main-item img {
+  position: absolute;
+  width: 140px;
+  height: auto;
+}
+.about__content .about__main .about__main-item .about_main-item-description {
+  font-family: "Lora", serif;
+  font-size: 1.125rem;
 }
 
 /*# sourceMappingURL=about-us.css.map */

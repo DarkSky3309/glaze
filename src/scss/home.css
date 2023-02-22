@@ -4,6 +4,19 @@
   height: 700px;
   overflow: hidden;
 }
+.home__content .left {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 25px;
+}
+.home__content .right {
+  position: absolute;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
 
 .image {
   width: 152px;
@@ -14,21 +27,6 @@
 
 h1 {
   padding-bottom: 20px;
-}
-
-.left {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  left: 25px;
-}
-
-.right {
-  position: absolute;
-  right: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
 }
 
 .bcg-circle {
