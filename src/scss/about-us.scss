@@ -6,8 +6,16 @@
 
   .about__title {
     text-align: center;
+    height: 100px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
 
     .title {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+
       &::before {
         content: '';
         position: absolute;
@@ -24,34 +32,41 @@
   .about__main {
     position: relative;
 
-    .about__main-item {
+    .left-side, .right-side {
       position: absolute;
       height: 300px;
       padding: 0 25px;
+    }
 
-      &:nth-of-type(1) {
-        top: 0
-      }
+    .left-side:nth-child(1) {
+      top: 0;
+    }
 
-      &:nth-of-type(2) {
-        top: 340px;
-      }
+    .right-side:nth-child(2) {
+      top: 340px;
+    }
 
-      &:nth-of-type(3) {
-        top: 720px;
-      }
+    .left-side:nth-child(3) {
+      top: 720px;
+    }
 
-      &:nth-of-type(4) {
-        top: 1040px;
-      }
+    .right-side:nth-child(4) {
+      top: 1040px;
+    }
+
+    .about__main-item {
+      position: absolute;
+      width: calc(100vw - 50px);
+      left: 25px;
 
       .left {
         display: flex;
         flex-direction: row-reverse;
 
-        .about__main-item-info-name{
+        .about__main-item-info-name {
           padding-right: 20px;
         }
+
         img {
           left: 25px;
           top: -33px;
@@ -61,9 +76,11 @@
 
       .right {
         display: flex;
-        .about__main-item-info-name{
+
+        .about__main-item-info-name {
           padding-left: 20px;
         }
+
         img {
           right: 25px;
           top: -33px;
@@ -79,13 +96,15 @@
         background-color: $orange;
         border-radius: 20px;
         margin-bottom: 20px;
-        .about__main-item-info-name{
-          h3{
+
+        .about__main-item-info-name {
+          h3 {
             font-size: $logo;
             font-weight: 400;
             margin-bottom: 10px;
           }
-          h4{
+
+          h4 {
             font-size: $bigger;
             width: min-content;
             font-weight: 400;
@@ -101,7 +120,7 @@
       }
 
 
-      .about_main-item-description{
+      .about_main-item-description {
         font-family: "Lora", serif;
         font-size: $regular-text;
       }
