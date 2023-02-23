@@ -105,11 +105,11 @@ const Header = () => {
                 <i onClick={() => showMenu()} className="ri-menu-line"/>
                 {visibility && <div className={"menu__links"} id={"myLinks"}>
                     <ul>
-                        <li className={"menu-item"}><Link to="/home">Home</Link></li>
-                        <li className={"menu-item"}><Link to="/services">Services</Link></li>
-                        <li className={"menu-item"}><Link to="/look-book">LookBook</Link></li>
-                        <li className={"menu-item"}><Link to="/about-us">About Us</Link></li>
-                        <li className={"menu-item"}><Link to="/contact">Contact</Link></li>
+                        <li onClick={() => {setVisibility(false); closeMenuAnimation()}} className={"menu-item"}><Link to="/home">Home</Link></li>
+                        <li onClick={() => {setVisibility(false); closeMenuAnimation()}} className={"menu-item"}><Link to="/services">Services</Link></li>
+                        <li onClick={() => {setVisibility(false); closeMenuAnimation()}} className={"menu-item"}><Link to="/look-book">LookBook</Link></li>
+                        <li onClick={() => {setVisibility(false); closeMenuAnimation()}} className={"menu-item"}><Link to="/about-us">About Us</Link></li>
+                        <li onClick={() => {setVisibility(false); closeMenuAnimation()}} className={"menu-item"}><Link to="/contact">Contact</Link></li>
                     </ul>
                 </div>}
             </div>

@@ -57,7 +57,7 @@
   padding-right: 20px;
 }
 .about__content .about__main .about__main-item .left img {
-  left: 25px;
+  left: 0;
   top: -33px;
   border-radius: 20px;
 }
@@ -68,7 +68,7 @@
   padding-left: 20px;
 }
 .about__content .about__main .about__main-item .right img {
-  right: 25px;
+  right: 0px;
   top: -33px;
   border-radius: 20px;
 }
