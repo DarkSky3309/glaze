@@ -5,6 +5,7 @@ import {Navigate, Route, Routes} from "react-router-dom";
 import React from "react";
 import Services from "./components/services/services";
 import About from "./components/about-us/About";
+import Contact from "./components/contact/contact";
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
                     <Route path="/services" element={<Services/>}/>
                     <Route path="/look-book" element={<Services/>}/>
                     <Route path="/about-us" element={<About/>}/>
-                    <Route path="/contact" element={<Services/>}/>
+                    <Route path="/contact" element={<Contact/>}/>
                 </Routes>
             </main>
         <Footer/>
