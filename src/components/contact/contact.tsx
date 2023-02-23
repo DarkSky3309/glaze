@@ -1,8 +1,41 @@
-import React, {createRef} from 'react';
+import React, {createRef, useEffect} from 'react';
 import "./../../scss/contact.css"
 
 const Contact = () => {
-    const title = createRef<HTMLHeadingElement>()
+    const title = createRef<HTMLHeadingElement>(),
+        phone = createRef<HTMLDivElement>(),
+        email = createRef<HTMLDivElement>(),
+        location = createRef<HTMLDivElement>(),
+        form = createRef<HTMLFormElement>(),
+        circle = createRef<HTMLDivElement>();
+
+
+    let id: number | undefined = undefined
+
+    useEffect(()=>{InitialAnimation()}, [])
+
+    function InitialAnimation(){
+        let startPosition = 500;
+        clearInterval(id);
+        id = setInterval(frame);
+
+
+        function frame() {
+            if (startPosition === 0) {
+                clearInterval(id);
+            } else if (title.current && phone.current && email.current && location.current && circle.current && form.current) {
+                startPosition -=5
+                title.current.style.top = startPosition + "px"
+                phone.current.style.left = startPosition + "px"
+                location.current.style.left = startPosition + "px"
+                email.current.style.left = -startPosition + "px"
+                circle.current.style.top = startPosition + "px"
+                form.current.style.top = 450 + startPosition +"px"
+            }
+        }
+    }
+
+
     return (
         <div className={"contact__content"}>
             <div className="contact__title">
@@ -10,24 +43,24 @@ const Contact = () => {
             </div>
             <div className="contact__main-wrapper">
                 <div className="contact__info">
-                    <div className="contact__info-phone contact__container">
+                    <div ref={phone} className="contact__info-phone contact__container">
                         <i className="ri-phone-line"></i>
                         <h3>Tel.</h3>
                         <p>+380 95 567 43 56</p>
                     </div>
-                    <div className="contact__info-mail contact__container">
+                    <div ref={email} className="contact__info-mail contact__container">
                         <i className="ri-mail-line"></i>
                         <h3>E-mail</h3>
                         <p>glaze.designer@gmail.com</p>
                     </div>
-                    <div className="contact__info-location contact__container">
+                    <div ref={location} className="contact__info-location contact__container">
                         <i className="ri-map-pin-2-line"></i>
                         <h3>Location</h3>
                         <p>st. Victory 45 of. 6, Kyiv, Ukraine</p>
                     </div>
                 </div>
-                <div className="circle"></div>
-                <form action="#">
+                <div ref={circle} className="circle"></div>
+                <form ref={form} action="#">
                     <label className={"title"} htmlFor="title">Feedback</label>
                     <div className="name">
                         <label htmlFor="name">Name</label>
