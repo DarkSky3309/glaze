@@ -1,0 +1,101 @@
+@import "variables";
+
+.contact__content {
+  overflow: hidden;
+  position: relative;
+  padding: 0 25px;
+  margin-bottom: 40px;
+  .contact__title{
+    position: relative;
+    height: 70px;
+    .title {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      &::before{
+        content: '';
+        position: absolute;
+        background-color: $orange;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        z-index: -1;
+      }
+    }
+  }
+  .contact__main-wrapper{
+    position: relative;
+    .contact__info{
+      .contact__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.75rem;
+        margin-bottom: 30px;
+        i{
+          font-size: $logo;
+        }
+        h3{
+          font-size: $bigger;
+          font-weight: 400;
+        }
+        p{
+          font-size: $regular-text;
+        }
+      }
+    }
+    .circle{
+      right: -50px;
+      left: unset;
+      z-index: -1;
+      top: 120px;
+    }
+    form{
+      background-color: $form-color;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 25px;
+      .title{
+        font-size: $bigger;
+      }
+      & div{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+        font-family: "Inter", sans-serif;
+        width: 100%;
+        input{
+          background-color: $orange;
+          color: white;
+          border: none;
+          border-radius: 20px;
+          width: 100%;
+          padding: 5px 0 5px 10px;
+        }
+        textarea{
+          background-color: $orange;
+          color: white;
+          border: none;
+          border-radius: 20px;
+          width: 100%;
+          resize: none;
+          padding: 5px 0 5px 10px;
+        }
+      }
+      .submit{
+        width: min-content;
+        background-color: $orange;
+        color: white;
+        border-radius: 20px;
+        padding: 10px 15px;
+        border: 3px solid white;
+        font-size: $regular-text;
+      }
+    }
+  }
+}
