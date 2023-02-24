@@ -1,31 +1,23 @@
 .services__content {
   position: relative;
-  height: 920px;
 }
 .services__content .services__title {
   position: relative;
-  height: 70px;
 }
 .services__content .services__title .title {
-  position: absolute;
   text-align: center;
-  width: 100%;
 }
-.services__content .services__title .aftercircle::before {
+.services__content .services__title .title::before {
   content: "";
   position: absolute;
   background-color: #ED6D33;
-  margin-left: -20px;
+  margin-left: 70px;
   width: 70px;
   height: 70px;
   border-radius: 50%;
   z-index: -1;
 }
-.services__content .services__main {
-  height: 600px;
-}
 .services__content .services__main .services__main-item {
-  position: absolute;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -35,15 +27,6 @@
   padding-bottom: 20px;
   max-width: 320px;
   min-width: 310px;
-}
-.services__content .services__main .services__main-item:nth-of-type(2) {
-  top: 350px;
-}
-.services__content .services__main .services__main-item:last-of-type {
-  bottom: 10px;
-}
-.services__content .services__main .services__main-item:not(:last-of-type) {
-  border-bottom: 2px solid #55644B;
 }
 .services__content .services__main .services__main-item h3 {
   font-weight: 400;
