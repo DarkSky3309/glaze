@@ -6,6 +6,7 @@ import React from "react";
 import Services from "./components/services/services";
 import About from "./components/about-us/About";
 import Contact from "./components/contact/contact";
+import Lookbook from "./components/look-book/Lookbook";
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
                     <Route path="*" element={<Navigate to="/home"/>}/>
                     <Route path="/home" element={<Home/>}/>
                     <Route path="/services" element={<Services/>}/>
-                    <Route path="/look-book" element={<Services/>}/>
+                    <Route path="/look-book" element={<Lookbook/>}/>
                     <Route path="/about-us" element={<About/>}/>
                     <Route path="/contact" element={<Contact/>}/>
                 </Routes>

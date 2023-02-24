@@ -7,34 +7,41 @@ const Contact = () => {
         email = createRef<HTMLDivElement>(),
         location = createRef<HTMLDivElement>(),
         form = createRef<HTMLFormElement>(),
-        circle = createRef<HTMLDivElement>();
+        circle = createRef<HTMLDivElement>(),
+        speed: number = 7;
 
+    useEffect(() => {
+        InitialAnimation()
+    }, [])
 
-    let id: number | undefined = undefined
+    const animationMoveFromRight = [
+        {transform: "translateX(500px)"},
+        {transform: "translateX(0)"}
+    ]
+    const animationMoveFromLeft = [
+        {transform: "translateX(-500px)"},
+        {transform: "translateX(0)"}
+    ]
+    const animationMoveFromTop = [
+        {transform: "translateY(500px)"},
+        {transform: "translateY(0)"}
+    ]
 
-    useEffect(()=>{InitialAnimation()}, [])
+    const animationDuration = {
+        duration: (speed * 100),
+        iterations: 1,
+    };
 
-    function InitialAnimation(){
-        let startPosition = 500;
-        clearInterval(id);
-        id = setInterval(frame);
-
-
-        function frame() {
-            if (startPosition === 0) {
-                clearInterval(id);
-            } else if (title.current && phone.current && email.current && location.current && circle.current && form.current) {
-                startPosition -=5
-                title.current.style.top = startPosition + "px"
-                phone.current.style.left = startPosition + "px"
-                location.current.style.left = startPosition + "px"
-                email.current.style.left = -startPosition + "px"
-                circle.current.style.top = startPosition + "px"
-                form.current.style.top = 450 + startPosition +"px"
-            }
+    function InitialAnimation() {
+        if (title.current && phone.current && email.current && location.current && circle.current && form.current) {
+            form.current.animate(animationMoveFromRight, animationDuration)
+            title.current.animate(animationMoveFromTop, animationDuration)
+            phone.current.animate(animationMoveFromLeft, animationDuration)
+            location.current.animate(animationMoveFromLeft, animationDuration)
+            email.current.animate(animationMoveFromRight, animationDuration)
+            circle.current.animate(animationMoveFromTop, animationDuration)
         }
     }
-
 
     return (
         <div className={"contact__content"}>
@@ -82,7 +89,7 @@ const Contact = () => {
                 </form>
             </div>
         </div>
-    );
+    )
 };
 
 export default Contact;
