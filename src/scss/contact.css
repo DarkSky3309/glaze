@@ -3,11 +3,9 @@
   position: relative;
   padding: 0 25px;
   margin-bottom: 40px;
-  height: 970px;
 }
 .contact__content .contact__title {
   position: relative;
-  height: 70px;
 }
 .contact__content .contact__title .title {
   text-align: center;
@@ -24,9 +22,6 @@
 }
 .contact__content .contact__main-wrapper {
   position: relative;
-}
-.contact__content .contact__main-wrapper .contact__info {
-  height: 450px;
 }
 .contact__content .contact__main-wrapper .contact__info .contact__container {
   min-width: max-content;
@@ -46,15 +41,6 @@
 .contact__content .contact__main-wrapper .contact__info .contact__container p {
   font-size: 1.125rem;
 }
-.contact__content .contact__main-wrapper .contact__info .contact__container:nth-child(1) {
-  top: 0;
-}
-.contact__content .contact__main-wrapper .contact__info .contact__container:nth-child(2) {
-  top: 150px;
-}
-.contact__content .contact__main-wrapper .contact__info .contact__container:nth-child(3) {
-  top: 300px;
-}
 .contact__content .contact__main-wrapper .circle {
   right: -50px;
   left: unset;
@@ -62,9 +48,6 @@
   top: 120px;
 }
 .contact__content .contact__main-wrapper form {
-  height: 400px;
-  width: calc(100vw - 100px);
-  top: 450px;
   background-color: rgba(237, 109, 51, 0.45);
   border-radius: 20px;
   display: flex;

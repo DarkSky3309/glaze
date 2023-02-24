@@ -23,7 +23,7 @@ const Contact = () => {
         {transform: "translateX(0)"}
     ]
     const animationMoveFromTop = [
-        {transform: "translateY(500px)"},
+        {transform: "translateY(800px)"},
         {transform: "translateY(0)"}
     ]
 

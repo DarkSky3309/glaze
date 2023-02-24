@@ -1,16 +1,13 @@
 .about__content {
   position: relative;
-  height: 1500px;
 }
 .about__content .about__title {
   text-align: center;
-  height: 100px;
   margin: 0 auto;
   width: 100%;
   position: relative;
 }
 .about__content .about__title .title {
-  position: absolute;
   text-align: center;
   width: 100%;
 }
@@ -28,26 +25,11 @@
   position: relative;
 }
 .about__content .about__main .left-side, .about__content .about__main .right-side {
-  position: absolute;
-  height: 300px;
   padding: 0 25px;
 }
-.about__content .about__main .left-side:nth-child(1) {
-  top: 0;
-}
-.about__content .about__main .right-side:nth-child(2) {
-  top: 340px;
-}
-.about__content .about__main .left-side:nth-child(3) {
-  top: 720px;
-}
-.about__content .about__main .right-side:nth-child(4) {
-  top: 1040px;
-}
 .about__content .about__main .about__main-item {
-  position: absolute;
-  width: calc(100vw - 50px);
-  left: 25px;
+  position: relative;
+  padding-bottom: 50px;
 }
 .about__content .about__main .about__main-item .left {
   display: flex;
@@ -68,7 +50,7 @@
   padding-left: 20px;
 }
 .about__content .about__main .about__main-item .right img {
-  right: 0px;
+  right: 0;
   top: -33px;
   border-radius: 20px;
 }

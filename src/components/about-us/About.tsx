@@ -7,33 +7,36 @@ const About = () => {
         secondElement = createRef<HTMLDivElement>(),
         thirdElement = createRef<HTMLDivElement>(),
         fourthElement = createRef<HTMLDivElement>(),
-        title = createRef<HTMLHeadingElement>()
-    let id: number | undefined = undefined
-
+        title = createRef<HTMLHeadingElement>(),
+        speed: number = 7;
     useEffect(() => {
         InitialAnimation()
     }, [])
 
+    const animationMoveFromRight = [
+        {transform: "translateX(500px)"},
+        {transform: "translateX(0)"}
+    ]
+    const animationMoveFromLeft = [
+        {transform: "translateX(-500px)"},
+        {transform: "translateX(0)"}
+    ]
+    const animationMoveFromTop = [
+        {transform: "translateY(800px)"},
+        {transform: "translateY(0)"}
+    ]
+    const animationDuration = {
+        duration: (speed * 100),
+        iterations: 1,
+    };
+
     function InitialAnimation() {
-        let startPosition = 500,
-            titleStartPosition = 300
-
-        clearInterval(id);
-        id = setInterval(frame);
-
-
-        function frame() {
-            if (startPosition === 0) {
-                clearInterval(id);
-            } else if (firsElement.current && secondElement.current && thirdElement.current && fourthElement.current && title.current) {
-                startPosition -= 5;
-                titleStartPosition -= 2.8
-                firsElement.current.style.left = startPosition + "px"
-                secondElement.current.style.left = -startPosition + "px"
-                thirdElement.current.style.left = startPosition + "px"
-                fourthElement.current.style.left = -startPosition + "px"
-                title.current.style.bottom = titleStartPosition + "px"
-            }
+        if (firsElement.current && secondElement.current && thirdElement.current && fourthElement.current && title.current) {
+            firsElement.current.animate(animationMoveFromLeft, animationDuration)
+            secondElement.current.animate(animationMoveFromRight, animationDuration)
+            thirdElement.current.animate(animationMoveFromLeft, animationDuration)
+            fourthElement.current.animate(animationMoveFromRight, animationDuration)
+            title.current.animate(animationMoveFromTop, animationDuration)
         }
 
     }

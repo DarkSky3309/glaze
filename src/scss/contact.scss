@@ -5,10 +5,8 @@
   position: relative;
   padding: 0 25px;
   margin-bottom: 40px;
-  height: 970px;
   .contact__title{
     position: relative;
-    height: 70px;
     .title {
       text-align: center;
       width: 100%;
@@ -26,7 +24,6 @@
   .contact__main-wrapper{
     position: relative;
     .contact__info{
-      height: 450px;
       .contact__container{
         min-width: max-content;
         display: flex;
@@ -44,15 +41,6 @@
         p{
           font-size: $regular-text;
         }
-        &:nth-child(1){
-          top: 0;
-        }
-        &:nth-child(2){
-          top: 150px;
-        }
-        &:nth-child(3){
-          top: 300px;
-        }
       }
     }
     .circle{
@@ -62,9 +50,6 @@
       top: 120px;
     }
     form{
-      height: 400px;
-      width: calc(100vw - 100px);
-      top: 450px;
       background-color: $form-color;
       border-radius: 20px;
       display: flex;
