@@ -3,4 +3,46 @@
 .title{
   font-size: $phone-title-size;
   font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.fromRight{
+  animation: animationFromRight 1s 1;
+}
+.fromLeft{
+  animation: animationFromLeft 1s 1;
+}
+
+.fromTop{
+  animation: animationFromTop 1s 1;
+}
+
+.fromBottom{
+  animation: animationFromBottom 1s 1;
+}
+.fromBottomTitle{
+  animation: animationFromBottomTitle 1s 1;
+}
+
+
+@keyframes animationFromRight {
+  0% {transform: translateX(500px)}
+  100% {transform: translateX(0)}
+}
+@keyframes animationFromLeft {
+  0% {transform: translateX(-500px)}
+  100% {transform: translateX(0)}
+}
+@keyframes animationFromTop {
+  0% {transform: translateY(-500px)}
+  100% {transform: translateX(0)}
+}
+@keyframes animationFromBottom {
+  0% {transform: translateY(500px)}
+  100% {transform: translateX(0)}
+}
+
+@keyframes animationFromBottomTitle {
+  0% {transform: translateY(800px)}
+  100% {transform: translateX(0)}
 }

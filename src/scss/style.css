@@ -40,11 +40,76 @@ a:hover {
 .title {
   font-size: 3.5rem;
   font-weight: 400;
+  margin-bottom: 30px;
 }
 
+.fromRight {
+  animation: animationFromRight 1s 1;
+}
+
+.fromLeft {
+  animation: animationFromLeft 1s 1;
+}
+
+.fromTop {
+  animation: animationFromTop 1s 1;
+}
+
+.fromBottom {
+  animation: animationFromBottom 1s 1;
+}
+
+.fromBottomTitle {
+  animation: animationFromBottomTitle 1s 1;
+}
+
+@keyframes animationFromRight {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes animationFromLeft {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes animationFromTop {
+  0% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes animationFromBottom {
+  0% {
+    transform: translateY(500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes animationFromBottomTitle {
+  0% {
+    transform: translateY(800px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 body {
   background-color: #728267;
   color: white;
+}
+
+main {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

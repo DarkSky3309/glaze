@@ -3,51 +3,13 @@ import AboutItemComponent from "./AboutItemComponent";
 import "./../../scss/about-us.css"
 
 const About = () => {
-    const firsElement = createRef<HTMLDivElement>(),
-        secondElement = createRef<HTMLDivElement>(),
-        thirdElement = createRef<HTMLDivElement>(),
-        fourthElement = createRef<HTMLDivElement>(),
-        title = createRef<HTMLHeadingElement>(),
-        speed: number = 7;
-    useEffect(() => {
-        InitialAnimation()
-    }, [])
-
-    const animationMoveFromRight = [
-        {transform: "translateX(500px)"},
-        {transform: "translateX(0)"}
-    ]
-    const animationMoveFromLeft = [
-        {transform: "translateX(-500px)"},
-        {transform: "translateX(0)"}
-    ]
-    const animationMoveFromTop = [
-        {transform: "translateY(800px)"},
-        {transform: "translateY(0)"}
-    ]
-    const animationDuration = {
-        duration: (speed * 100),
-        iterations: 1,
-    };
-
-    function InitialAnimation() {
-        if (firsElement.current && secondElement.current && thirdElement.current && fourthElement.current && title.current) {
-            firsElement.current.animate(animationMoveFromLeft, animationDuration)
-            secondElement.current.animate(animationMoveFromRight, animationDuration)
-            thirdElement.current.animate(animationMoveFromLeft, animationDuration)
-            fourthElement.current.animate(animationMoveFromRight, animationDuration)
-            title.current.animate(animationMoveFromTop, animationDuration)
-        }
-
-    }
-
     return (
         <div className={"about__content"}>
             <div className="about__title">
-                <h1 className={"title"} ref={title}>About Us</h1>
+                <h1 className={"title fromBottom"}>About Us</h1>
             </div>
             <div className="about__main">
-                <div className="left-side" ref={firsElement}>
+                <div className="left-side fromLeft">
                     <AboutItemComponent name={"Olga"}
                                         image={"src/assets/about/olga.png"}
                                         profession={"Company director"}
@@ -56,7 +18,7 @@ const About = () => {
                                             "the type of service for your needs and solve any problem with the project."}
                                         position={"left"}/>
                 </div>
-                <div className="right-side" ref={secondElement}>
+                <div className="right-side fromRight">
                     <AboutItemComponent name={"Eva"}
                                         image={"src/assets/about/eva.png"}
                                         profession={"Chief designer"}
@@ -65,14 +27,14 @@ const About = () => {
                                             "a lot of ideas in her head to improve your space."}
                                         position={"right"}/>
                 </div>
-                <div className="left-side" ref={thirdElement}>
+                <div className="left-side fromLeft">
                     <AboutItemComponent name={"Mary"}
                                         image={"src/assets/about/mary.png"}
                                         profession={"Designer"}
                                         description={"It will make your dreams come true and fill your home with new colors so that it sparkles for you every day."}
                                         position={"left"}/>
                 </div>
-                <div className="right-side" ref={fourthElement}>
+                <div className="right-side fromRight">
                     <AboutItemComponent name={"Jacob"}
                                         image={"src/assets/about/jacob.png"}
                                         profession={"Engineer"}

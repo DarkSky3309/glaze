@@ -1,15 +1,14 @@
 .about__content {
   position: relative;
+  overflow: hidden;
 }
 .about__content .about__title {
   text-align: center;
   margin: 0 auto;
-  width: 100%;
   position: relative;
 }
 .about__content .about__title .title {
   text-align: center;
-  width: 100%;
 }
 .about__content .about__title .title::before {
   content: "";

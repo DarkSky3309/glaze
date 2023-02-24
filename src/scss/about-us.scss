@@ -2,17 +2,14 @@
 
 .about__content {
   position: relative;
-
+  overflow: hidden;
   .about__title {
     text-align: center;
     margin: 0 auto;
-    width: 100%;
     position: relative;
 
     .title {
       text-align: center;
-      width: 100%;
-
       &::before {
         content: '';
         position: absolute;
@@ -32,7 +29,7 @@
     .left-side, .right-side {
       padding: 0 25px;
     }
-    
+
     .about__main-item {
       position: relative;
       padding-bottom: 50px;
