@@ -44,23 +44,23 @@ a:hover {
 }
 
 .fromRight {
-  animation: animationFromRight 1s 1;
+  animation: animationFromRight 0.5s 1;
 }
 
 .fromLeft {
-  animation: animationFromLeft 1s 1;
+  animation: animationFromLeft 0.5s 1;
 }
 
 .fromTop {
-  animation: animationFromTop 1s 1;
+  animation: animationFromTop 0.5s 1;
 }
 
 .fromBottom {
-  animation: animationFromBottom 1s 1;
+  animation: animationFromBottom 0.5s 1;
 }
 
 .fromBottomTitle {
-  animation: animationFromBottomTitle 1s 1;
+  animation: animationFromBottomTitle 0.5s 1;
 }
 
 @keyframes animationFromRight {
