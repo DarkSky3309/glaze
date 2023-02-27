@@ -12,28 +12,39 @@ const Review: FC<ReviewProps> = ({reviews}) => {
     function showReview(index: number) {
         for (let i = 0; i < dotList.current.children.length; i++) {
             dotList.current.children[i].classList.replace("active", "inactive")
-        };
+        }
+        ;
         dotList.current.children[index].classList.replace("inactive", "active")
         setIndex(index)
     }
 
-    useEffect(() => {showReview(0)}, [])
+    useEffect(() => {
+        showReview(0)
+    }, [])
 
     return (
         <div className={"review"}>
             <div className="review__wrapper">
-                <div className="review__info">
-                    <img src={reviews[index].img} alt="face"/>
-                    <h3>{reviews[index].name}</h3>
+                <div className="item__wrapper">
+                    <div className="review__info">
+                        <div className="image">
+                            <img src={reviews[index].img} alt="face"/>
+
+                        </div>
+                        <h3>{reviews[index].name}</h3>
+                    </div>
+                    <div className="review__feedback">
+                        <span>{reviews[index].review}</span>
+                    </div>
                 </div>
-                <div className="review__feedback">
-                    <span>{reviews[index].review}</span>
-                </div>
+
             </div>
             <div className="numeration" ref={dotList}>
-                {reviews.map((value, index, array) => {return (<div className={"inactive"} key={index} onClick={() => showReview(array[index - 1].id)}></div>)})}
+                {reviews.map((value, index, array) => {
+                    return (
+                        <div className={"inactive"} key={index} onClick={() => showReview(array[index].id)}></div>)
+                })}
             </div>
-
         </div>
     );
 };

@@ -39,8 +39,7 @@
   margin-left: 60px;
   z-index: -1;
 }
-
-.image {
+.home__content .image {
   width: 152px;
   height: 234px;
   object-fit: cover;

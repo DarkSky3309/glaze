@@ -48,14 +48,15 @@
       }
     }
   }
+  .image {
+    width: 152px;
+    height: 234px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
 }
 
-.image {
-  width: 152px;
-  height: 234px;
-  object-fit: cover;
-  border-radius: 20px;
-}
+
 
 .bcg-circle {
   position: absolute;
