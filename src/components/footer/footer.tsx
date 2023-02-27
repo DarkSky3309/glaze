@@ -1,5 +1,6 @@
 import React from 'react';
 import "./../../scss/footer.css"
+import {Link} from "react-router-dom";
 const Footer = () => {
     return (
         <footer>
@@ -22,10 +23,11 @@ const Footer = () => {
             <h4 className={"conditions"}>Condition for using <br/> the site</h4>
             <div className="footer__menu">
                 <h4>Menu</h4>
-                <a href="#">LookBook</a>
-                <a href="#">About Us</a>
-                <a href="#">Services</a>
-                <a href="#">Contacts</a>
+                <Link to="/home">Home</Link>
+                <Link to="/about-us">About Us</Link>
+                <Link to="/services">Services</Link>
+                <Link to="/look-book">LookBook</Link>
+                <Link to="/contact">Contacts</Link>
             </div>
             <h4 className={"privacy"}>Privacy policy</h4>
         </footer>
