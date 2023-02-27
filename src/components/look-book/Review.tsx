@@ -23,15 +23,14 @@ const Review: FC<ReviewProps> = ({reviews}) => {
     }, [])
 
     return (
-        <div className={"review"}>
+        <div className={"review fromBottom"}>
             <div className="review__wrapper">
                 <div className="item__wrapper">
                     <div className="review__info">
-                        <div className="image">
+                        <div className="image fromLeft">
                             <img src={reviews[index].img} alt="face"/>
-
                         </div>
-                        <h3>{reviews[index].name}</h3>
+                        <h3 className={"fromRight"}>{reviews[index].name}</h3>
                     </div>
                     <div className="review__feedback">
                         <span>{reviews[index].review}</span>
@@ -39,7 +38,7 @@ const Review: FC<ReviewProps> = ({reviews}) => {
                 </div>
 
             </div>
-            <div className="numeration" ref={dotList}>
+            <div className="numeration fromRight" ref={dotList}>
                 {reviews.map((value, index, array) => {
                     return (
                         <div className={"inactive"} key={index} onClick={() => showReview(array[index].id)}></div>)

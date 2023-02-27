@@ -2,6 +2,17 @@
 
 .lookBook {
   margin-bottom: 30px;
+  position: relative;
+  .square{
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    background-color: $orange;
+    border-radius: 20px;
+    top: 90px;
+    right: -80px;
+    z-index: -1;
+  }
   .title{
     &::before{
       content: '';
@@ -86,7 +97,7 @@
       border-radius: 20px;
       margin-bottom: 10px;
       .item__wrapper{
-        height: 304px;
+        min-height: 304px;
         padding: 25px;
         .review__info{
           display: flex;

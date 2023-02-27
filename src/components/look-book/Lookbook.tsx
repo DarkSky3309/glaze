@@ -76,7 +76,7 @@ const Lookbook = () => {
                 <DesignSlider slides={slides}/>
             </div>
             <Review reviews={reviews}/>
-
+            <div className="square fromLeft"></div>
         </div>
     );
 };

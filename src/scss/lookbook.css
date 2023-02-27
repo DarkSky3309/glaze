@@ -1,5 +1,16 @@
 .lookBook {
   margin-bottom: 30px;
+  position: relative;
+}
+.lookBook .square {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  background-color: #ED6D33;
+  border-radius: 20px;
+  top: 90px;
+  right: -80px;
+  z-index: -1;
 }
 .lookBook .title::before {
   content: "";
@@ -78,7 +89,7 @@
   margin-bottom: 10px;
 }
 .lookBook .review .review__wrapper .item__wrapper {
-  height: 304px;
+  min-height: 304px;
   padding: 25px;
 }
 .lookBook .review .review__wrapper .item__wrapper .review__info {

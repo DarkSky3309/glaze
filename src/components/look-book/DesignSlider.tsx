@@ -14,16 +14,16 @@ const DesignSlider:FC<SliderProps> = ({slides}) => {
     }, [])
 
     return (
-        <div className={"slider"}>
+        <div className={"slider fromRight"}>
             <motion.div ref={carousel} className={"carousel"} whileTap={{cursor: "grabbing"}}>
                 <motion.div drag={"x"} dragConstraints={{right:0, left: -width}} className={"carousel__inner"}>
                     {images.map((image, index) => {
                         return(
                             <motion.div key={image} className={"slide"}>
                                 <img src={image} alt={"design"}/>
-                                <div className={"slide-info"}>{slides[index].term}</div>
-                                <div className={"slide-info"}>{slides[index].area}</div>
-                                <div className={"slide-info"}>{slides[index].price}</div>
+                                <div className={"slide-info fromLeft"}>{slides[index].term}</div>
+                                <div className={"slide-info  fromLeft"}>{slides[index].area}</div>
+                                <div className={"slide-info  fromLeft"}>{slides[index].price}</div>
                             </motion.div>
                         )})
                     }
