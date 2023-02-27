@@ -1,3 +1,23 @@
+.lookBook .title::before {
+  content: "";
+  background-color: #ED6D33;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  margin-left: 25px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.lookBook .title::after {
+  content: "";
+  background-color: #ED6D33;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  margin-left: -90px;
+  border-radius: 50%;
+  z-index: -1;
+}
 .lookBook .carousel {
   cursor: grab;
   overflow: hidden;
@@ -26,6 +46,25 @@
   width: 150px;
   height: 100px;
   border-radius: 20px;
+}
+.lookBook .review .numeration {
+  display: flex;
+  min-width: 100px;
+  max-width: 100px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.lookBook .review .numeration .inactive {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5333333333);
+  border-radius: 50%;
+}
+.lookBook .review .numeration .active {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=lookbook.css.map */

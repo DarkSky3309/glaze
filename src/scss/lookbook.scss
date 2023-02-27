@@ -1,6 +1,28 @@
 @import "variables";
 
 .lookBook {
+  .title{
+    &::before{
+      content: '';
+      background-color: $orange;
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      margin-left: 25px;
+      border-radius: 50%;
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      background-color: $orange;
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      margin-left: -90px;
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
   .carousel {
     cursor: grab;
     overflow: hidden;
@@ -34,5 +56,27 @@
         }
       }
     }
+  }
+
+  .review{
+      .numeration{
+        display: flex;
+        min-width: 100px;
+        max-width: 100px;
+        margin: 0 auto;
+        justify-content: space-between;
+        .inactive{
+          width: 10px;
+          height: 10px;
+          background-color: #ffffff88;
+          border-radius: 50%;
+        }
+        .active{
+          width: 10px;
+          height: 10px;
+          background-color: #ffffff;
+          border-radius: 50%;
+        }
+      }
   }
 }
