@@ -1,4 +1,4 @@
-import React, {createRef, useEffect, useState} from 'react';
+import React, {createRef, useEffect, useRef, useState} from 'react';
 import "../../scss/header.css"
 import {Link} from "react-router-dom";
 
@@ -7,12 +7,25 @@ const Header = () => {
     let logo = createRef<HTMLHeadingElement>()
     let menu = createRef<HTMLDivElement>()
     let id: number | undefined = undefined
+    const [width, setWidth] = useState(window.innerWidth);
 
+    useEffect(() => {
+        window.addEventListener("resize", updateDimensions);
+        return () =>
+            window.removeEventListener("resize", updateDimensions);
+    }, [])
+    const updateDimensions = () => {
+        const width = window.innerWidth
+        setWidth(width)
+    }
     function showMenu() {
         setVisibility(!visibility)
-        !visibility ?
-            openMenuAnimation() :
+        if(!visibility && width < 550){
+            openMenuAnimation()
+        } else if (width < 550){
             closeMenuAnimation()
+        }
+
     }
 
     function closeMenuAnimation() {
@@ -57,11 +70,11 @@ const Header = () => {
                 <i onClick={() => showMenu()} className="ri-menu-line"/>
                 {visibility && <div className={"menu__links"} id={"myLinks"}>
                     <ul>
-                        <li onClick={() => {setVisibility(false); closeMenuAnimation()}} className={"menu-item"}><Link to="/home">Home</Link></li>
-                        <li onClick={() => {setVisibility(false); closeMenuAnimation()}} className={"menu-item"}><Link to="/services">Services</Link></li>
-                        <li onClick={() => {setVisibility(false); closeMenuAnimation()}} className={"menu-item"}><Link to="/look-book">LookBook</Link></li>
-                        <li onClick={() => {setVisibility(false); closeMenuAnimation()}} className={"menu-item"}><Link to="/about-us">About Us</Link></li>
-                        <li onClick={() => {setVisibility(false); closeMenuAnimation()}} className={"menu-item"}><Link to="/contact">Contact</Link></li>
+                        <li onClick={() => {setVisibility(false); width < 550 ? closeMenuAnimation() : ""}} className={"menu-item"}><Link to="/home">Home</Link></li>
+                        <li onClick={() => {setVisibility(false); width < 550 ? closeMenuAnimation() : ""}} className={"menu-item"}><Link to="/services">Services</Link></li>
+                        <li onClick={() => {setVisibility(false); width < 550 ? closeMenuAnimation() : ""}} className={"menu-item"}><Link to="/look-book">LookBook</Link></li>
+                        <li onClick={() => {setVisibility(false); width < 550 ? closeMenuAnimation() : ""}} className={"menu-item"}><Link to="/about-us">About Us</Link></li>
+                        <li onClick={() => {setVisibility(false); width < 550 ? closeMenuAnimation() : ""}} className={"menu-item"}><Link to="/contact">Contact</Link></li>
                     </ul>
                 </div>}
             </div>
