@@ -196,9 +196,20 @@ a:hover {
   body .services__content {
     padding: 0 25px;
   }
+  body .services__content .title::before {
+    content: "";
+    position: absolute;
+    background-color: #ED6D33;
+    margin-left: 170px !important;
+    width: 124px !important;
+    height: 124px !important;
+    border-radius: 50%;
+    z-index: -1;
+  }
   body .services__content .services__main-item {
+    grid-column-gap: 30px !important;
     display: grid !important;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "title image" "description image";
     max-width: 736px !important;
@@ -246,6 +257,39 @@ a:hover {
     width: 104px !important;
     height: 104px !important;
     margin-top: -30px !important;
+  }
+  body .lookBook .carousel .carousel__inner {
+    display: flex;
+  }
+  body .lookBook .carousel .carousel__inner .slide {
+    padding-left: 50px !important;
+  }
+  body .lookBook .carousel .carousel__inner .slide:last-of-type {
+    padding-right: 50px !important;
+  }
+  body .lookBook .carousel .carousel__inner .slide:first-of-type {
+    padding-left: 35px !important;
+  }
+  body .lookBook .carousel .carousel__inner .slide .slide-info {
+    font-size: 1.125rem;
+  }
+  body .lookBook .carousel .carousel__inner .slide .slide-info:not(:last-of-type) {
+    padding-bottom: 5px;
+  }
+  body .lookBook .carousel .carousel__inner .slide img {
+    margin-bottom: 20px;
+    width: 351px !important;
+    height: 202px !important;
+    border-radius: 20px;
+  }
+  body .lookBook .carousel .carousel__inner .slide .info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  body .lookBook .carousel .carousel__inner .slide .slide-info {
+    font-size: 28px;
   }
 }
 body {

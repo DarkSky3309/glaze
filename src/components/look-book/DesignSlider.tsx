@@ -4,27 +4,31 @@ import images from "./images";
 
 interface SliderProps{
     slides: {term: string, area: string, price: string}[]
+    isTablet: () => boolean
+
 }
 
-const DesignSlider:FC<SliderProps> = ({slides}) => {
-    const [width, setWidth] = useState(0);
+const DesignSlider:FC<SliderProps> = ({slides, isTablet}) => {
     const carousel = useRef() as React.MutableRefObject<HTMLDivElement>
 
-    useEffect(() => {setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
+
+    useEffect(() => {
     }, [])
 
     return (
         <div className={"slider fromRight"}>
             <motion.div ref={carousel} className={"carousel"} whileTap={{cursor: "grabbing"}}>
-                <motion.div drag={"x"} dragConstraints={{right:0, left: -width}} className={"carousel__inner"}>
+                <motion.div drag={"x"} dragConstraints={{right:0, left: !isTablet() ? -670 : -1750}} className={"carousel__inner"}>
                     {images.map((image, index) => {
                         return(
                             <motion.div key={image} className={"slide"}>
                                 <img src={image} alt={"design"}/>
-                                <div className={"slide-info fromLeft"}>{slides[index].term}</div>
-                                <div className={"slide-info  fromLeft"}>{slides[index].area}</div>
-                                <div className={"slide-info  fromLeft"}>{slides[index].price}</div>
-                            </motion.div>
+                                <div className={"info"}>
+                                    <div className={"slide-info term fromLeft"}>{slides[index].term}</div>
+                                    <div className={"slide-info area fromLeft"}>{slides[index].area}</div>
+                                    <div className={"slide-info price fromLeft"}>{slides[index].price}</div>
+                                </div>
+                                </motion.div>
                         )})
                     }
                 </motion.div>

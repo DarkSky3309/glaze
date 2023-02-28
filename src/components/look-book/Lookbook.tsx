@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "./../../scss/lookbook.css"
 import DesignSlider from "./DesignSlider";
 import Review from "./Review";
@@ -69,13 +69,28 @@ const Lookbook = () => {
                 "a fast and high-quality result. I really liked Olga, who manages the company. All the questions and minor troubles that arose were easily resolved with her.",
             id: 5
         }]
+    const [width, setWidth] = useState(window.innerWidth);
+    const updateDimensions = () => {
+        const width = window.innerWidth
+        setWidth(width)
+    }
+    useEffect(() => {
+        window.addEventListener("resize", updateDimensions);
+        return () =>
+            window.removeEventListener("resize", updateDimensions);
+    }, [])
+    function isTablet(): boolean {
+        if (width > 500)
+            return true
+        return false;
+    }
     return (
         <div className={"lookBook"}>
             <h1 className={"title"}>LookBook</h1>
             <div className={"slider__wrapper"}>
-                <DesignSlider slides={slides}/>
+                <DesignSlider slides={slides} isTablet={isTablet}/>
             </div>
-            <Review reviews={reviews}/>
+            <Review reviews={reviews} isTablet={isTablet}/>
             <div className="square fromLeft"></div>
         </div>
     );
