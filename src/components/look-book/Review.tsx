@@ -12,7 +12,15 @@ const Review: FC<ReviewProps> = ({reviews, isTablet}) => {
     const dotList = useRef() as React.MutableRefObject<HTMLDivElement>
 
 
+    function initial(){
+        for (let i = 0; i < dotList.current.children.length; i++) {
+            dotList.current.children[i].classList.replace("active", "inactive")
+        };
+        dotList.current.children[0].classList.add("active")
+        setIndex(0)
 
+    }
+    useEffect(() => {initial()},[])
     function showReview(index: number) {
         if (!isTablet()){
             for (let i = 0; i < dotList.current.children.length; i++) {

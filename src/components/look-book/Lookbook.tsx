@@ -80,7 +80,7 @@ const Lookbook = () => {
             window.removeEventListener("resize", updateDimensions);
     }, [])
     function isTablet(): boolean {
-        if (width > 500)
+        if (width > 550)
             return true
         return false;
     }

@@ -291,6 +291,19 @@ a:hover {
   body .lookBook .carousel .carousel__inner .slide .slide-info {
     font-size: 28px;
   }
+  body .lookBook .review {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  body .lookBook .review .review__wrapper {
+    max-width: 49%;
+    min-width: 40%;
+  }
+  body .lookBook .review .review__wrapper .item__wrapper {
+    min-height: max-content !important;
+  }
 }
 body {
   background-color: #728267;

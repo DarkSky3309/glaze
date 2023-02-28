@@ -9,7 +9,6 @@ import Contact from "./components/contact/contact";
 import Lookbook from "./components/look-book/Lookbook";
 
 function App() {
-
     return (
         <div className="App">
             <Header/>
@@ -24,6 +23,7 @@ function App() {
                 </Routes>
             </main>
         <Footer/>
+
         </div>
     )
 }

@@ -221,6 +221,20 @@
           }
         }
       }
+      .review{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        .review__wrapper{
+          max-width: 49%;
+          min-width: 40%;
+          .item__wrapper{
+            min-height: max-content!important;
+
+          }
+        }
+      }
     }
   }
 }
