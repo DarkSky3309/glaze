@@ -9,17 +9,21 @@ interface ItemProps{
 }
 const AboutItemComponent:FC<ItemProps> = ({name, image,profession,description, position}) => {
     return (
-        <div className="about__main-item">
+        <div className={`about__main-item ${position + "1"}`}>
             <div className={`about__main-item-info ${position}`}>
-                <img src={image} alt="our specialist"/>
+                <img src={image} alt="our specialist" className={"mb"}/>
                 <div className="about__main-item-info-name">
                     <h3>{name}</h3>
                     <h4>{profession}</h4>
                 </div>
             </div>
+            <img src={image} alt="our specialist" className={"ourSpecialist"}/>
+            <h3 className={"name"}>{name}</h3>
+            <h4 className={"profession"}>{profession}</h4>
             <p className="about_main-item-description">
                 {description}
             </p>
+            <div className="box"></div>
         </div>
     );
 };

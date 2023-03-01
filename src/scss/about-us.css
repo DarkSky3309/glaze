@@ -20,6 +20,10 @@
   z-index: -1;
   margin-left: 60px;
 }
+.about__content box {
+  display: none;
+  visibility: hidden;
+}
 .about__content .about__main {
   position: relative;
 }
@@ -29,6 +33,18 @@
 .about__content .about__main .about__main-item {
   position: relative;
   padding-bottom: 50px;
+}
+.about__content .about__main .about__main-item .name {
+  display: none;
+  visibility: hidden;
+}
+.about__content .about__main .about__main-item .ourSpecialist {
+  display: none;
+  visibility: hidden;
+}
+.about__content .about__main .about__main-item .profession {
+  display: none;
+  visibility: hidden;
 }
 .about__content .about__main .about__main-item .left {
   display: flex;

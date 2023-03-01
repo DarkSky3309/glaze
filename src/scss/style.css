@@ -341,6 +341,87 @@ a:hover {
   body .contact__content .contact__main-wrapper form input::placeholder, body .contact__content .contact__main-wrapper form textarea::placeholder {
     color: #464646 !important;
   }
+  body .about__content .about__main {
+    position: relative;
+  }
+  body .about__content .about__main .box {
+    display: block;
+    position: absolute;
+    width: 241px;
+    height: 152px;
+    background: #ED6D33;
+    border-radius: 20px;
+    z-index: -1;
+    bottom: 0;
+  }
+  body .about__content .about__main .left1 {
+    grid-template-areas: "image . ." "image name description" "image profession description" "image . .";
+    grid-template-columns: 210px 1fr 2fr;
+  }
+  body .about__content .about__main .left1 .box {
+    left: -30px;
+  }
+  body .about__content .about__main .right1 {
+    grid-template-areas: ". . image" "description name image" "description profession image" ". . image";
+    grid-template-columns: 2fr 1fr 210px;
+    justify-items: end;
+  }
+  body .about__content .about__main .right1 .box {
+    right: -30px;
+  }
+  body .about__content .about__main .about__main-item {
+    margin-bottom: 30px;
+    display: grid;
+    max-width: 730px;
+    grid-template-rows: repeat(4, 1fr);
+    max-height: 260px;
+    align-items: center;
+    grid-column-gap: 20px;
+  }
+  body .about__content .about__main .about__main-item .name {
+    display: block;
+    visibility: visible;
+    grid-area: name;
+    margin: 40px auto 0;
+    font-size: 29px;
+    font-weight: 400;
+  }
+  body .about__content .about__main .about__main-item .profession {
+    display: block;
+    visibility: visible;
+    grid-area: profession;
+    margin: 0 auto 30px;
+    font-size: 29px;
+    font-weight: 400;
+    width: min-content;
+    text-align: center;
+  }
+  body .about__content .about__main .about__main-item .ourSpecialist {
+    display: block;
+    visibility: visible;
+    grid-area: image;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: 183px;
+    min-width: 160px;
+  }
+  body .about__content .about__main .about__main-item img::before {
+    content: "";
+    position: absolute;
+    background-color: #ED6D33;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 60px;
+  }
+  body .about__content .about__main .about__main-item .about__main-item-info {
+    display: none;
+    visibility: hidden;
+  }
+  body .about__content .about__main .about__main-item p {
+    grid-area: description;
+  }
 }
 body {
   background-color: #728267;

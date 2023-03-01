@@ -22,6 +22,10 @@
       }
     }
   }
+  box{
+    display: none;
+    visibility: hidden;
+  }
 
   .about__main {
     position: relative;
@@ -33,6 +37,19 @@
     .about__main-item {
       position: relative;
       padding-bottom: 50px;
+      .name{
+        display: none;
+        visibility: hidden;
+      }
+
+      .ourSpecialist{
+        display: none;
+        visibility: hidden;
+      }
+      .profession{
+        display: none;
+        visibility: hidden;
+      }
 
       .left {
         display: flex;
