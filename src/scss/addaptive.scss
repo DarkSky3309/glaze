@@ -236,6 +236,49 @@
         }
       }
     }
+    .contact__content{
+      .contact__main-wrapper{
+        .contact__info{
+          margin: 0 auto;
+          max-width: 601px;
+          .contact__container{
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "icon subtitle"
+                                  "icon description";
+            align-items: center;
+            gap: unset;
+            grid-column-gap: 20px;
+            i{
+              grid-area: icon;
+              font-size: 50px;
+            }
+            h3{
+              grid-area: subtitle;
+              font-weight: 700;
+              font-size: 36px;
+            }
+            p{
+              font-weight: 700;
+              grid-area: description;
+              font-size: 29px;
+            }
+
+          }
+        }
+        form {
+          padding: 20px 30px;
+          input, textarea{
+            padding: 10px 27px;
+            font-size: 29px;
+            &::placeholder{
+              color: #464646!important;
+            }
+          }
+        }
+      }
+    }
   }
 }
 

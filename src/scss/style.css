@@ -304,6 +304,43 @@ a:hover {
   body .lookBook .review .review__wrapper .item__wrapper {
     min-height: max-content !important;
   }
+  body .contact__content .contact__main-wrapper .contact__info {
+    margin: 0 auto;
+    max-width: 601px;
+  }
+  body .contact__content .contact__main-wrapper .contact__info .contact__container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "icon subtitle" "icon description";
+    align-items: center;
+    gap: unset;
+    grid-column-gap: 20px;
+  }
+  body .contact__content .contact__main-wrapper .contact__info .contact__container i {
+    grid-area: icon;
+    font-size: 50px;
+  }
+  body .contact__content .contact__main-wrapper .contact__info .contact__container h3 {
+    grid-area: subtitle;
+    font-weight: 700;
+    font-size: 36px;
+  }
+  body .contact__content .contact__main-wrapper .contact__info .contact__container p {
+    font-weight: 700;
+    grid-area: description;
+    font-size: 29px;
+  }
+  body .contact__content .contact__main-wrapper form {
+    padding: 20px 30px;
+  }
+  body .contact__content .contact__main-wrapper form input, body .contact__content .contact__main-wrapper form textarea {
+    padding: 10px 27px;
+    font-size: 29px;
+  }
+  body .contact__content .contact__main-wrapper form input::placeholder, body .contact__content .contact__main-wrapper form textarea::placeholder {
+    color: #464646 !important;
+  }
 }
 body {
   background-color: #728267;
