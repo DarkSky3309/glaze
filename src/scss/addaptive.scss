@@ -425,6 +425,9 @@
 
 @media screen and (min-width: 1024px) {
   header{
+    overflow: hidden;
+    padding-left: unset!important;
+    padding-bottom: 35px!important;
     .invisible{
       display: none;
       visibility: hidden;
@@ -453,6 +456,7 @@
     }
   }
   footer{
+    overflow: hidden;
     padding: 30px 60px!important;
     grid-template-columns: repeat(4, max(220px)) !important;
     grid-template-rows: repeat(3, 1fr) !important;
@@ -480,6 +484,18 @@
     form{
       max-width: 901px;
       width: 100%;
+    }
+  }
+  .review{
+    flex-direction: column!important;
+    .wrappers{
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .review__wrapper{
+      height: 270px;
+      max-width: 390px!important;
+      min-width: unset!important;
     }
   }
 }

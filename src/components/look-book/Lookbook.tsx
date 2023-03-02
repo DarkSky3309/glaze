@@ -80,7 +80,12 @@ const Lookbook = () => {
             window.removeEventListener("resize", updateDimensions);
     }, [])
     function isTablet(): boolean {
-        if (width > 550)
+        if (width > 550 && width < 1024)
+            return true
+        return false;
+    }
+    function isDesktop(): boolean {
+        if (width > 1024)
             return true
         return false;
     }
@@ -90,7 +95,7 @@ const Lookbook = () => {
             <div className={"slider__wrapper"}>
                 <DesignSlider slides={slides} isTablet={isTablet}/>
             </div>
-            <Review reviews={reviews} isTablet={isTablet}/>
+            <Review reviews={reviews} isTablet={isTablet} isDesktop={isDesktop}/>
             <div className="square fromLeft"></div>
         </div>
     );
