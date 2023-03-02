@@ -1,6 +1,6 @@
 import React, {createRef, useEffect, useRef, useState} from 'react';
 import "../../scss/header.css"
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 const Header = () => {
     const [visibility, setVisibility] = useState(false)
@@ -61,18 +61,21 @@ const Header = () => {
             }
         }
     }
+    const square = useRef() as React.MutableRefObject<HTMLDivElement>
+    const circle = useRef() as React.MutableRefObject<HTMLDivElement>
+    const url = useLocation();
 
     return (
         <header className={"header"}>
-            <div className={"circle fromLeft"}></div>
+            <div className={`circle fromLeft ${url.pathname !== "/home" ? "invisible" : "visible"}`} ref={circle}></div>
             <h2 className={"logo fromRight"} ref={logo}>Glaze Designer</h2>
             <div className="menu__desktop fromTop">
                 <ul>
-                    <li><Link to={"/services"}>Services</Link></li>
-                    <li><Link to={"/look-book"}>LookBook</Link></li>
-                    <li><Link to={"/home"} className={"logo__desktop"}>Glaze Designer</Link></li>
-                    <li><Link to={"/about-us"}>About Us</Link></li>
-                    <li><Link to={"/contact"}>Contact</Link></li>
+                    <li><Link to={"/services"} className={url.pathname === "/services" ? "active" : " "}>Services</Link></li>
+                    <li><Link to={"/look-book"} className={url.pathname === "/look-book" ? "active" : " "}>LookBook</Link></li>
+                    <li><Link to={"/home"} className={`logo__desktop`}>Glaze Designer</Link></li>
+                    <li><Link to={"/about-us"} className={url.pathname === "/about-us" ? "active" : " "}>About Us</Link></li>
+                    <li><Link to={"/contact"} className={url.pathname === "/contact" ? "active" : " "}>Contact</Link></li>
                 </ul>
             </div>
             <div className={"menu fromTop"} ref={menu}>
@@ -87,7 +90,7 @@ const Header = () => {
                     </ul>
                 </div>}
             </div>
-            <div className={"animateObject fromBottomTitle"}></div>
+            <div className={`animateObject fromBottomTitle visible ${url.pathname !== "/home" ? "invisible" : "visible"}`} ref={square}></div>
         </header>
     );
 };
