@@ -57,7 +57,7 @@
       }
 
       .left {
-        max-width: 351px;
+        max-width: 451px;
 
         h1 {
           text-align: start;
@@ -71,7 +71,7 @@
       }
 
       .right {
-        max-width: 351px;
+        max-width: 451px;
         gap: unset;
         align-items: flex-start;
 
@@ -308,6 +308,9 @@
     .about__content {
       .about__main {
         position: relative;
+        margin: 0 auto;
+        min-width: min-content;
+        max-width: max-content;
         .box{
           display: block;
           position: absolute;

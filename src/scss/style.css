@@ -156,7 +156,7 @@ a:hover {
     height: 202px;
   }
   body .home__content .left {
-    max-width: 351px;
+    max-width: 451px;
   }
   body .home__content .left h1 {
     text-align: start;
@@ -167,7 +167,7 @@ a:hover {
     margin-left: 30px;
   }
   body .home__content .right {
-    max-width: 351px;
+    max-width: 451px;
     gap: unset;
     align-items: flex-start;
   }
@@ -343,6 +343,9 @@ a:hover {
   }
   body .about__content .about__main {
     position: relative;
+    margin: 0 auto;
+    min-width: min-content;
+    max-width: max-content;
   }
   body .about__content .about__main .box {
     display: block;
