@@ -20,9 +20,9 @@
   z-index: -1;
   margin-left: 60px;
 }
-.about__content box {
-  display: none;
+.about__content .title__desktop {
   visibility: hidden;
+  display: none;
 }
 .about__content .about__main {
   position: relative;

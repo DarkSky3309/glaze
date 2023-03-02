@@ -7,6 +7,7 @@ const About = () => {
         <div className={"about__content"}>
             <div className="about__title">
                 <h1 className={"title fromBottom"}>About Us</h1>
+                <h1 className={"title__desktop"}>About</h1>
             </div>
             <div className="about__main">
                 <div className="left-side fromLeft">
@@ -18,6 +19,7 @@ const About = () => {
                                             "the type of service for your needs and solve any problem with the project."}
                                         position={"left"}/>
                 </div>
+                <span className={"title__desktop"}>Us</span>
                 <div className="right-side fromRight">
                     <AboutItemComponent name={"Eva"}
                                         image={"src/assets/about/eva.png"}

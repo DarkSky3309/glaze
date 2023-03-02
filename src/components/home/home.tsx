@@ -15,8 +15,10 @@ const Home = () => {
                 <span className={"title subtitle"}>De <br/> signer</span>
                 <img src="src/assets/home/bcg3.png" alt="design" className="image"/>
                 <span className={"tablet-title title"}>De <br/> signer</span>
+                <div className="signer title">Signer</div>
             </div>
             <div className="bcg-circle bottom-left fromRight" ></div>
+            <div className="de title">De</div>
         </div>
     );
 

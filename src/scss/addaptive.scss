@@ -311,7 +311,8 @@
         margin: 0 auto;
         min-width: min-content;
         max-width: max-content;
-        .box{
+
+        .box {
           display: block;
           position: absolute;
           width: 241px;
@@ -321,18 +322,21 @@
           z-index: -1;
           bottom: 0;
         }
-        .left1{
+
+        .left1 {
           grid-template-areas:
                   "image . ."
                   "image name description"
                   "image profession description"
                   "image . .";
           grid-template-columns: 210px 1fr 2fr;
-          .box{
+
+          .box {
             left: -30px;
           }
         }
-        .right1{
+
+        .right1 {
           grid-template-areas:
                   ". . image"
                   "description name image"
@@ -340,10 +344,12 @@
                   ". . image";
           grid-template-columns: 2fr 1fr 210px;
           justify-items: end;
-          .box{
+
+          .box {
             right: -30px;
           }
         }
+
         .about__main-item {
           margin-bottom: 30px;
           display: grid;
@@ -352,7 +358,8 @@
           max-height: 260px;
           align-items: center;
           grid-column-gap: 20px;
-          .name{
+
+          .name {
             display: block;
             visibility: visible;
             grid-area: name;
@@ -360,7 +367,8 @@
             font-size: 29px;
             font-weight: 400;
           }
-          .profession{
+
+          .profession {
             display: block;
             visibility: visible;
             grid-area: profession;
@@ -370,6 +378,7 @@
             width: min-content;
             text-align: center;
           }
+
           .ourSpecialist {
             display: block;
             visibility: visible;
@@ -380,7 +389,8 @@
             max-width: 183px;
             min-width: 160px;
           }
-          img::before{
+
+          img::before {
             content: '';
             position: absolute;
             background-color: $orange;
@@ -403,7 +413,8 @@
 
     }
   }
-  footer{
+  footer {
+    padding: 20px 10% !important;
     grid-template-columns: repeat(3, 1fr) !important;
     grid-template-rows: repeat(4, 1fr) !important;
     grid-template-areas:
@@ -412,11 +423,12 @@
     "condition menu ."
     "privacy menu ." !important;
 
-    .footer__menu{
-      h4{
-        font-size: 36px!important;
+    .footer__menu {
+      h4 {
+        font-size: 36px !important;
       }
-      a{
+
+      a {
         font-size: 26px;
       }
     }
@@ -424,40 +436,46 @@
 }
 
 @media screen and (min-width: 1024px) {
-  header{
+  header {
     overflow: hidden;
-    padding-left: unset!important;
-    padding-bottom: 35px!important;
-    .invisible{
+    padding-left: unset !important;
+    padding-bottom: 35px !important;
+
+    .invisible {
       display: none;
       visibility: hidden;
     }
-    .menu{
-    display: none;
-    visibility: hidden;
-  }
-    .logo{
+
+    .menu {
+      display: none;
+      visibility: hidden;
+    }
+
+    .logo {
       visibility: hidden;
       display: none;
     }
-    .animateObject{
+
+    .animateObject {
       width: 309px;
       z-index: -1;
     }
-    .menu__desktop{
+
+    .menu__desktop {
       padding: 0 10% !important;
       display: block;
       visibility: visible;
     }
-    .circle{
+
+    .circle {
       top: -19px;
       left: 33px;
       z-index: -1;
     }
   }
-  footer{
+  footer {
     overflow: hidden;
-    padding: 30px 60px!important;
+    padding: 30px 7% !important;
     grid-template-columns: repeat(4, max(220px)) !important;
     grid-template-rows: repeat(3, 1fr) !important;
     justify-content: space-around;
@@ -465,52 +483,110 @@
     "logo menu term social"
     ". menu condition social"
     ". menu privacy ." !important;
-    .social{
-      h3{
+
+    .social {
+      h3 {
         text-align: center;
       }
     }
 
   }
-  body{
-    .contact__content{
-      .contact__main-wrapper{
+  body {
+    .contact__content {
+      .contact__main-wrapper {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         gap: 20px;
-        .contact__info{
+
+        .contact__info {
           margin: unset;
         }
       }
-      form{
+
+      form {
         max-width: 901px;
         width: 100%;
       }
     }
-    .review{
-      flex-direction: column!important;
-      .wrappers{
+
+    .review {
+      flex-direction: column !important;
+
+      .wrappers {
         display: flex;
         justify-content: space-evenly;
       }
-      .review__wrapper{
+
+      .review__wrapper {
         height: 270px;
-        max-width: 390px!important;
-        min-width: unset!important;
+        max-width: 390px !important;
+        min-width: unset !important;
       }
     }
-    .services__content{
-      .services__main-item{
+
+    .services__content {
+      .services__main-item {
         grid-template-columns: repeat(3, 1fr) !important;
-        grid-template-rows: 1fr!important;
-        grid-template-areas: "image title description"!important;
-        align-items: center!important;
-        max-width: 1240px!important;
-        &:nth-of-type(2){
-          grid-template-areas: "title description image"!important;
+        grid-template-rows: 1fr !important;
+        grid-template-areas: "image title description" !important;
+        align-items: center !important;
+        max-width: 1240px !important;
+
+        &:nth-of-type(2) {
+          grid-template-areas: "title description image" !important;
+        }
+      }
+    }
+
+    .home__content {
+      gap: 90px!important;
+      padding: 40px 10%;
+      .tablet-title{
+        visibility: hidden!important;
+        display: none!important;
+      }
+      .de, .signer{
+        visibility: visible!important;
+        display: block!important;
+      }
+      .signer{
+        &::before{
+          content: '';
+          position: absolute;
+          background-color: $orange;
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          margin-top: 30px;
+          margin-left: 200px;
+          z-index: -1;
+        }
+      }
+      .de{
+        position: absolute;
+        right: 45%;
+        bottom: 50%;
+        z-index: 5;
+        &::before{
+          content: '';
+          position: absolute;
+          background-color: $orange;
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          margin-top: 30px;
+          margin-left: 60px;
+          z-index: -1;
+        }
+      }
+      .left, .right{
+        max-width: 500px!important;
+        img{
+
         }
       }
     }
   }
 }
+

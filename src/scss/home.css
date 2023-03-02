@@ -25,6 +25,10 @@
   border-radius: 50%;
   z-index: -1;
 }
+.home__content .de, .home__content .signer {
+  visibility: hidden;
+  display: none;
+}
 .home__content .right {
   width: 100%;
   min-width: 152px;
