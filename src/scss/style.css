@@ -425,6 +425,17 @@ a:hover {
   body .about__content .about__main .about__main-item p {
     grid-area: description;
   }
+  footer {
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: repeat(4, 1fr) !important;
+    grid-template-areas: "logo menu social" "term menu social" "condition menu ." "privacy menu ." !important;
+  }
+  footer .footer__menu h4 {
+    font-size: 36px !important;
+  }
+  footer .footer__menu a {
+    font-size: 26px;
+  }
 }
 @media screen and (min-width: 1024px) {
   header .menu {
@@ -448,6 +459,16 @@ a:hover {
     top: -19px;
     left: 33px;
     z-index: -1;
+  }
+  footer {
+    padding: 30px 60px !important;
+    grid-template-columns: repeat(4, 220px) !important;
+    grid-template-rows: repeat(3, 1fr) !important;
+    justify-content: space-around;
+    grid-template-areas: "logo menu term social" ". menu condition social" ". menu privacy ." !important;
+  }
+  footer .social h3 {
+    text-align: center;
   }
 }
 body {
