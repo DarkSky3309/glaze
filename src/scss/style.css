@@ -480,30 +480,40 @@ a:hover {
   footer .social h3 {
     text-align: center;
   }
-  .contact__content .contact__main-wrapper {
+  body .contact__content .contact__main-wrapper {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     gap: 20px;
   }
-  .contact__content .contact__main-wrapper .contact__info {
+  body .contact__content .contact__main-wrapper .contact__info {
     margin: unset;
   }
-  .contact__content form {
+  body .contact__content form {
     max-width: 901px;
     width: 100%;
   }
-  .review {
+  body .review {
     flex-direction: column !important;
   }
-  .review .wrappers {
+  body .review .wrappers {
     display: flex;
     justify-content: space-evenly;
   }
-  .review .review__wrapper {
+  body .review .review__wrapper {
     height: 270px;
     max-width: 390px !important;
     min-width: unset !important;
+  }
+  body .services__content .services__main-item {
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: 1fr !important;
+    grid-template-areas: "image title description" !important;
+    align-items: center !important;
+    max-width: 1240px !important;
+  }
+  body .services__content .services__main-item:nth-of-type(2) {
+    grid-template-areas: "title description image" !important;
   }
 }
 body {
