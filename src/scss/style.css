@@ -107,7 +107,7 @@ a:hover {
 @media screen and (min-width: 550px) {
   @keyframes animationFromRight {
     0% {
-      transform: translateX(800px);
+      transform: translateX(760px);
     }
     100% {
       transform: translateX(0);
@@ -426,9 +426,34 @@ a:hover {
     grid-area: description;
   }
 }
+@media screen and (min-width: 1024px) {
+  header .menu {
+    display: none;
+    visibility: hidden;
+  }
+  header .logo {
+    visibility: hidden;
+    display: none;
+  }
+  header .animateObject {
+    width: 309px;
+    z-index: -1;
+  }
+  header .menu__desktop {
+    padding: 0 10% !important;
+    display: block;
+    visibility: visible;
+  }
+  header .circle {
+    top: -19px;
+    left: 33px;
+    z-index: -1;
+  }
+}
 body {
   background-color: #728267;
   color: white;
+  width: 100vw;
 }
 
 main {

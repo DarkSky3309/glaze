@@ -66,7 +66,16 @@ const Header = () => {
         <header className={"header"}>
             <div className={"circle fromLeft"}></div>
             <h2 className={"logo fromRight"} ref={logo}>Glaze Designer</h2>
-            <div className={"menu fromRight"} ref={menu}>
+            <div className="menu__desktop fromTop">
+                <ul>
+                    <li><Link to={"/services"}>Services</Link></li>
+                    <li><Link to={"/look-book"}>LookBook</Link></li>
+                    <li><Link to={"/home"} className={"logo__desktop"}>Glaze Designer</Link></li>
+                    <li><Link to={"/about-us"}>About Us</Link></li>
+                    <li><Link to={"/contact"}>Contact</Link></li>
+                </ul>
+            </div>
+            <div className={"menu fromTop"} ref={menu}>
                 <i onClick={() => showMenu()} className="ri-menu-line"/>
                 {visibility && <div className={"menu__links"} id={"myLinks"}>
                     <ul>

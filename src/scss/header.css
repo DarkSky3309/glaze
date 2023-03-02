@@ -34,26 +34,43 @@
   animation-duration: 1s;
 }
 
+.menu__desktop {
+  width: 100%;
+  visibility: hidden;
+  display: none;
+}
+.menu__desktop ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.menu__desktop ul li a {
+  color: white;
+}
+.menu__desktop ul .logo__desktop {
+  font-size: 36px;
+}
+
 .menu-bcg {
   background-color: #ED6D33;
 }
 
 .menu {
-  position: absolute;
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  padding: 60px 45px 35px;
   border-radius: 20px 0 20px 20px;
   gap: 10px;
   z-index: 2;
+  overflow: hidden;
 }
 
 .menu i {
-  position: absolute;
-  top: 40px;
-  right: 30px;
+  padding: 40px 30px;
   z-index: 3;
+  margin-right: 0;
 }
 
 .menu__links {
