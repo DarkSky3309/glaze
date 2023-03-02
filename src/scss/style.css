@@ -438,6 +438,10 @@ a:hover {
   }
 }
 @media screen and (min-width: 1024px) {
+  header .invisible {
+    display: none;
+    visibility: hidden;
+  }
   header .menu {
     display: none;
     visibility: hidden;
@@ -469,6 +473,19 @@ a:hover {
   }
   footer .social h3 {
     text-align: center;
+  }
+  .contact__content .contact__main-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+  .contact__content .contact__main-wrapper .contact__info {
+    margin: unset;
+  }
+  .contact__content form {
+    max-width: 901px;
+    width: 100%;
   }
 }
 body {

@@ -425,6 +425,10 @@
 
 @media screen and (min-width: 1024px) {
   header{
+    .invisible{
+      display: none;
+      visibility: hidden;
+    }
     .menu{
     display: none;
     visibility: hidden;
@@ -461,6 +465,21 @@
       h3{
         text-align: center;
       }
+    }
+  }
+  .contact__content{
+    .contact__main-wrapper{
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 20px;
+      .contact__info{
+        margin: unset;
+      }
+    }
+    form{
+      max-width: 901px;
+      width: 100%;
     }
   }
 }

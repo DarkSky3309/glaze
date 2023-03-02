@@ -9,7 +9,20 @@
   padding: 0 0 30px 30px;
   height: 100px;
   z-index: 1;
-}
+
+  .active{
+    &:before{
+      content: '';
+      position: absolute;
+      background-color: $orange;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      z-index: -1;
+      margin-top: -140px;
+      margin-left: -70px;
+    }
+  }}
 
 .circle {
   position: absolute;
@@ -58,23 +71,8 @@
   display: block;
   visibility: visible;
 }
-.invisible{
-  display: none;
-  visibility: hidden;
-}
-.active{
-  &:before{
-    content: '';
-    position: absolute;
-    background-color: $orange;
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
-    z-index: -1;
-    margin-top: -140px;
-    margin-left: -70px;
-  }
-}
+
+
 
 .menu-bcg{
   background-color: $orange;
