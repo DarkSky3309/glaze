@@ -493,6 +493,21 @@
   }
   body {
     .contact__content {
+      h1{
+        font-size: $desktop-title-size;
+        &::before{
+          content: '';
+          background-color: $orange;
+          position: absolute;
+          width: 160px!important;
+          height: 160px!important;
+          margin-left: 60px;
+          margin-top: 40px;
+          border-radius: 50%;
+          z-index: -1;
+
+        }
+      }
       .contact__main-wrapper {
         display: flex;
         flex-direction: row-reverse;
@@ -516,6 +531,7 @@
       .wrappers {
         display: flex;
         justify-content: space-evenly;
+        gap: 10px;
       }
 
       .review__wrapper {
@@ -540,18 +556,21 @@
     }
 
     .home__content {
-      gap: 90px!important;
+      gap: 90px !important;
       padding: 40px 10%;
-      .tablet-title{
-        visibility: hidden!important;
-        display: none!important;
+
+      .tablet-title {
+        visibility: hidden !important;
+        display: none !important;
       }
-      .de, .signer{
-        visibility: visible!important;
-        display: block!important;
+
+      .de, .signer {
+        visibility: visible !important;
+        display: block !important;
       }
-      .signer{
-        &::before{
+
+      .signer {
+        &::before {
           content: '';
           position: absolute;
           background-color: $orange;
@@ -563,12 +582,14 @@
           z-index: -1;
         }
       }
-      .de{
+
+      .de {
         position: absolute;
         right: 45%;
         bottom: 50%;
         z-index: 5;
-        &::before{
+
+        &::before {
           content: '';
           position: absolute;
           background-color: $orange;
@@ -580,10 +601,125 @@
           z-index: -1;
         }
       }
-      .left, .right{
-        max-width: 500px!important;
-        img{
 
+      .left, .right {
+        max-width: 500px !important;
+
+        img {
+
+        }
+      }
+    }
+
+    .about {
+      padding: 40px 6%;
+      display: grid;
+      grid-template-columns: minmax(400px, 850px) minmax(400px, 850px);
+      grid-template-rows: repeat(4, 1fr);
+      align-items: center;
+      margin: 0 auto;
+
+      .about-desktop_content {
+        display: flex;
+        align-items: center;
+        max-width: 650px;
+        min-width: 500px;
+        gap: 20px;
+
+        &:nth-of-type(2){
+          h3{
+            &::before {
+              content: '';
+              position: absolute;
+              background-color: $orange;
+              width: 301px;
+              height: 225px;
+              border-radius: 20px;
+              margin-top: 220px;
+              margin-left: -420px;
+              z-index: -1;
+            }
+          }
+        }&:nth-of-type(3){
+           h3{
+             &::before {
+               content: '';
+               position: absolute;
+               background-color: $orange;
+               width: 301px;
+               height: 125px;
+               border-radius: 20px;
+               margin-top: 220px;
+               margin-left: 240px;
+               z-index: -1;
+             }
+           }
+         }
+
+
+        .about__main-item-info-name {
+          font-size: 30px;
+
+          & > h3, > h4 {
+            font-weight: 400;
+            text-align: center;
+            width: min-content;
+            margin: 0 auto;
+          }
+
+          & > h3 {
+            margin-bottom: 10px;
+
+          }
+
+        }
+
+        & > p {
+          font-size: 140%;
+        }
+
+        &:nth-of-type(3) {
+          grid-row: 3/ 4;
+          grid-column: 2 / 3;
+        }
+
+        &:nth-of-type(4) {
+          grid-row: 4/5;
+        }
+
+      }
+
+      .title__desktop {
+        visibility: visible;
+        display: block;
+
+      }
+
+      h1 {
+        font-size: $desktop-title-size;
+        &::before {
+          content: '';
+          position: absolute;
+          background-color: $orange;
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          margin-top: 80px;
+          margin-left: 280px;
+          z-index: -1;
+        }
+      }
+      span{
+        font-size: $desktop-title-size;
+        &::before {
+          content: '';
+          position: absolute;
+          background-color: $orange;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          margin-left: 30px;
+          z-index: -1;
         }
       }
     }

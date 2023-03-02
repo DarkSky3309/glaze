@@ -14,11 +14,11 @@ const Home = () => {
                 <img src="src/assets/home/bcg2.png" alt="design" className="image"/>
                 <span className={"title subtitle"}>De <br/> signer</span>
                 <img src="src/assets/home/bcg3.png" alt="design" className="image"/>
-                <span className={"tablet-title title"}>De <br/> signer</span>
+                <span className={"tablet-title title "}>De <br/> signer</span>
                 <div className="signer title">Signer</div>
             </div>
             <div className="bcg-circle bottom-left fromRight" ></div>
-            <div className="de title">De</div>
+            <div className="de title fromBottomTitle">De</div>
         </div>
     );
 
